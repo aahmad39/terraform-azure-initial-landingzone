@@ -1,0 +1,10 @@
+title = "Custom Gitleaks Rules"
+
+[[rules]]
+id = "terraform-vm-password"
+
+description = "Detect Terraform VM Password"
+
+regex = '''(?i)(admin_password|vm_password|password|computer_name)\s*=\s*["'][^"']+["']'''
+
+tags = ["terraform", "password", "azure"]
