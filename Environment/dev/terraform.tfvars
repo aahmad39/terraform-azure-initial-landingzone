@@ -1,11 +1,17 @@
 rg-dev = {
   rg1 = {
     name     = "rg-002"
+    st_name="stg000966"
     location = "central india"
+    account_tier="Standard"
+    accountRepli="GRS"
   }
     rg2 = {
     name     = "rg-003"
+    st_name="stg000966"
     location = "central india"
+    account_tier="Standard"
+    accountRepli="GRS"
   }
 
 }

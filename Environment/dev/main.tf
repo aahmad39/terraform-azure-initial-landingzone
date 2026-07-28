@@ -4,6 +4,12 @@ module "rg-dev" {
 
 }
 
+module "storage_account" {
+  depends_on = [ module.rg-dev ]
+  source = "../../child_module/azurerm_storage_account"
+  str = var.rg-dev
+  
+}
 module "vnet-dev" {
   depends_on = [module.rg-dev]
   source     = "../../child_module/azurerm_virtual_network"
