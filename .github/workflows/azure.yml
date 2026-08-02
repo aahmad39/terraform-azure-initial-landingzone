@@ -25,7 +25,7 @@ jobs:
           creds: ${{ secrets.adnan }}
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -upgrade
         working-directory: ./Environment/sandbox
 
       - name: Terraform Validate
