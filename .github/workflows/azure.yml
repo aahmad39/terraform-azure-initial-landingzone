@@ -3,7 +3,7 @@ name: Terraform Sandbox Deployment
 on:
   push:
     branches:
-      - sandbox   # run pipeline when sandbox branch is updated
+      - main   # run pipeline when main branch is updated
   pull_request:
 
 jobs:
