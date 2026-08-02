@@ -1,10 +1,36 @@
-title = "Custom Gitleaks Rules"
+title = "Custom Secret Detection"
 
+# Detect hardcoded passwords
 [[rules]]
-id = "terraform-vm-password"
+id = "hardcoded-password"
+description = "Detect hardcoded passwords"
+regex = '''(?i)\b(password|passwd|pwd|admin_password)\b\s*[:=]\s*["'][^"']{4,}["']'''
+tags = ["password"]
 
-description = "Detect Terraform VM Password"
+# Detect API Keys, Tokens, Secrets
+[[rules]]
+id = "hardcoded-secret"
+description = "Detect hardcoded secrets"
+regex = '''(?i)\b(api_key|apikey|token|access_token|client_secret|secret|connection_string|sas_token|access_key|secret_key)\b\s*[:=]\s*["'][^"']{6,}["']'''
+tags = ["secret"]
 
-regex = '''(?i)(admin_password|vm_password|password|computer_name)\s*=\s*["'][^"']+["']'''
+# Detect GitHub Personal Access Tokens
+[[rules]]
+id = "github-pat"
+description = "GitHub Personal Access Token"
+regex = '''gh[pousr]_[A-Za-z0-9_]{36,255}'''
+tags = ["github"]
 
-tags = ["terraform", "password", "azure"]
+# Detect Azure Storage Connection String
+[[rules]]
+id = "azure-storage-connection-string"
+description = "Azure Storage Connection String"
+regex = '''DefaultEndpointsProtocol=https;AccountName=.*?;AccountKey=.*?;EndpointSuffix=.*'''
+tags = ["azure"]
+
+# Detect JWT Tokens
+[[rules]]
+id = "jwt-token"
+description = "JWT Token"
+regex = '''eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9._-]+\.[A-Za-z0-9._-]+'''
+tags = ["jwt"]

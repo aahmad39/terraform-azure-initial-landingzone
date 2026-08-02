@@ -113,7 +113,7 @@ vm-dev = {
     managed_disk_type = "Standard_LRS"
     computer_name     = "backend-vm"
     admin_username    = "aahmad"
-    admin_password    = "Connect@2026"
+    # admin_password    = "Connect@2026"
     allocation_method = "Static"
     key_vault_name    = "dev-key-vault2"
   }
