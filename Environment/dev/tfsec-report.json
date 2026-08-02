@@ -1,0 +1,190 @@
+{
+	"results": [
+		{
+			"rule_id": "AVD-AZU-0039",
+			"long_id": "azure-compute-disable-password-authentication",
+			"rule_description": "Password authentication should be disabled on Azure virtual machines",
+			"rule_provider": "azure",
+			"rule_service": "compute",
+			"impact": "Using password authentication is less secure that ssh keys may result in compromised servers",
+			"resolution": "Use ssh authentication for virtual machines",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/compute/disable-password-authentication/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine#disable_password_authentication",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine#disable_password_authentication"
+			],
+			"description": "Linux virtual machine allows password authentication.",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "module.vm-dev",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_virtual_machine\\main.tf",
+				"start_line": 41,
+				"end_line": 41
+			}
+		},
+		{
+			"rule_id": "AVD-AZU-0039",
+			"long_id": "azure-compute-disable-password-authentication",
+			"rule_description": "Password authentication should be disabled on Azure virtual machines",
+			"rule_provider": "azure",
+			"rule_service": "compute",
+			"impact": "Using password authentication is less secure that ssh keys may result in compromised servers",
+			"resolution": "Use ssh authentication for virtual machines",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/compute/disable-password-authentication/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine#disable_password_authentication",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine#disable_password_authentication"
+			],
+			"description": "Linux virtual machine allows password authentication.",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "module.vm-dev",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_virtual_machine\\main.tf",
+				"start_line": 41,
+				"end_line": 41
+			}
+		},
+		{
+			"rule_id": "AVD-AZU-0016",
+			"long_id": "azure-keyvault-no-purge",
+			"rule_description": "Key vault should have purge protection enabled",
+			"rule_provider": "azure",
+			"rule_service": "keyvault",
+			"impact": "Keys could be purged from the vault without protection",
+			"resolution": "Enable purge protection for key vaults",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/keyvault/no-purge/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault#purge_protection_enabled"
+			],
+			"description": "Vault does not have purge protection enabled.",
+			"severity": "MEDIUM",
+			"warning": false,
+			"status": 0,
+			"resource": "module.key-vault",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_key_vault\\main.tf",
+				"start_line": 1,
+				"end_line": 8
+			}
+		},
+		{
+			"rule_id": "AVD-AZU-0016",
+			"long_id": "azure-keyvault-no-purge",
+			"rule_description": "Key vault should have purge protection enabled",
+			"rule_provider": "azure",
+			"rule_service": "keyvault",
+			"impact": "Keys could be purged from the vault without protection",
+			"resolution": "Enable purge protection for key vaults",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/keyvault/no-purge/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault#purge_protection_enabled"
+			],
+			"description": "Vault does not have purge protection enabled.",
+			"severity": "MEDIUM",
+			"warning": false,
+			"status": 0,
+			"resource": "module.key-vault",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_key_vault\\main.tf",
+				"start_line": 1,
+				"end_line": 8
+			}
+		},
+		{
+			"rule_id": "AVD-AZU-0013",
+			"long_id": "azure-keyvault-specify-network-acl",
+			"rule_description": "Key vault should have the network acl block specified",
+			"rule_provider": "azure",
+			"rule_service": "keyvault",
+			"impact": "Without a network ACL the key vault is freely accessible",
+			"resolution": "Set a network ACL for the key vault",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/keyvault/specify-network-acl/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault#network_acls"
+			],
+			"description": "Vault network ACL does not block access by default.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "module.key-vault",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_key_vault\\main.tf",
+				"start_line": 1,
+				"end_line": 8
+			}
+		},
+		{
+			"rule_id": "AVD-AZU-0013",
+			"long_id": "azure-keyvault-specify-network-acl",
+			"rule_description": "Key vault should have the network acl block specified",
+			"rule_provider": "azure",
+			"rule_service": "keyvault",
+			"impact": "Without a network ACL the key vault is freely accessible",
+			"resolution": "Set a network ACL for the key vault",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/keyvault/specify-network-acl/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault#network_acls"
+			],
+			"description": "Vault network ACL does not block access by default.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "module.key-vault",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_key_vault\\main.tf",
+				"start_line": 1,
+				"end_line": 8
+			}
+		},
+		{
+			"rule_id": "AVD-AZU-0011",
+			"long_id": "azure-storage-use-secure-tls-policy",
+			"rule_description": "The minimum TLS version for Storage Accounts should be TLS1_2",
+			"rule_provider": "azure",
+			"rule_service": "storage",
+			"impact": "The TLS version being outdated and has known vulnerabilities",
+			"resolution": "Use a more recent TLS/SSL policy for the load balancer",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/storage/use-secure-tls-policy/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account#min_tls_version"
+			],
+			"description": "Storage account uses an insecure TLS version.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "module.storage_account",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_storage_account\\main.tf",
+				"start_line": 1,
+				"end_line": 10
+			}
+		},
+		{
+			"rule_id": "AVD-AZU-0011",
+			"long_id": "azure-storage-use-secure-tls-policy",
+			"rule_description": "The minimum TLS version for Storage Accounts should be TLS1_2",
+			"rule_provider": "azure",
+			"rule_service": "storage",
+			"impact": "The TLS version being outdated and has known vulnerabilities",
+			"resolution": "Use a more recent TLS/SSL policy for the load balancer",
+			"links": [
+				"https://aquasecurity.github.io/tfsec/v1.28.14/checks/azure/storage/use-secure-tls-policy/",
+				"https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account#min_tls_version"
+			],
+			"description": "Storage account uses an insecure TLS version.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "module.storage_account",
+			"location": {
+				"filename": "D:\\terraform-azure-landingzone-Github\\terraform-azure-initial-landingzone\\child_module\\azurerm_storage_account\\main.tf",
+				"start_line": 1,
+				"end_line": 10
+			}
+		}
+	]
+}
