@@ -37,6 +37,6 @@ jobs:
         working-directory: ./Environment/sandbox
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/sandbox'
+        if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve tfplan
         working-directory: ./Environment/sandbox
