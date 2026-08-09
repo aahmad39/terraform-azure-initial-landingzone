@@ -4,6 +4,10 @@ rg_sandbox = {
     name     = "rg-sandbox-001"
     location = "central india"
   }
+   rg2 = {
+    name     = "rg-sandbox-002"
+    location = "central india"
+  }
 }
 
 # 2. Virtual Network Configuration
